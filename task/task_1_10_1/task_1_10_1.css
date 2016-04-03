@@ -1,0 +1,77 @@
+#box{
+	width: 100%;
+	box-sizing:border-box;
+	display: inline-flex;
+	align-items:center;				/*box高度中间对齐*/
+	justify-content:space-between;	/*box等距离分布*/
+
+	-moz-align-items:center;
+	-moz-justify-content:space-between;
+
+	-webkit-align-items:center;
+	-webkit-justify-content:space-between;
+	}
+	.box1{
+		width: 120px;
+		height: 120px;
+		border: 1px solid red;
+	}
+	.box2{
+		width: 120px;
+		height: 100px;
+		border: 1px solid red;
+	}
+	.box3{
+		width: 120px;
+		height: 40px;
+		border: 1px solid red;
+	}
+	.box4{
+		width: 120px;
+		height: 200px;
+		border: 1px solid blue;
+		order:1;
+		-webkit-order:1;     /*第一个元素靠左，第四个元素靠右*/
+		-moz-order:1;
+	}
+
+@media screen and (max-width: 640px){
+	#box{
+		width: 100%;
+		display: inline-flex;
+		align-items:flex-start;			/*box上方水平对齐*/
+		justify-content:flex-start;		/*水平方向均匀分布*/
+		flew-wrap:wrap;					/*当子元素溢出时，换行*/
+
+		-moz-align-items:flex-start;			/*firefox-box上方水平对齐*/
+		-moz-justify-content:flex-start;		/*水平方向均匀分布*/
+		-moz-flew-wrap:wrap;					/*当子元素溢出时，换行*/
+
+		-webkit-align-items:flex-start;			/*box上方水平对齐*/
+		-webkit-justify-content:flex-start;		/*水平方向均匀分布*/
+		-webkit-flew-wrap:wrap;					/*当子元素溢出时，换行*/
+
+	}
+	.box1{
+		width: 120px;
+		height: 120px;
+		border: 1px solid red;	
+	}
+	.box2{
+		width: 120px;
+		height: 100px;
+		border: 1px solid red;
+	}
+	.box3{
+		width: 120px;
+		height: 40px;border: 1px solid red;
+	}
+	.box4{
+		width: 120px;
+		height: 200px;
+		border: 1px solid blue;
+		order:-1;
+		-webkit-order:-1;     /*第四个元素靠左，居最前面*/
+		-moz-order:-1;
+	}
+}
